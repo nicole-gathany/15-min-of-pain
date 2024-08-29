@@ -11,8 +11,39 @@ header, footer {
 
 section {
     float: left;
-    height: 200px;
+    height: 400px;
     width: 33.33%;
     border: 1px solid gray;
 }
 
+@media (max-width: 740px) {
+    header, footer {
+        height: 100px;
+        border: 1px solid red;
+    }
+}
+
+@media (max-width: 400px) and (orientation: portrait){
+    header, footer {
+        border: 1px solid red;
+    }
+    section {
+        height: 160px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 740px){
+    header, footer {
+        
+        border: 1px solid green;
+    }
+    section {
+        height: 300px;
+    }
+}
+
+@media print {
+    header, footer, section {
+        border: 1px solid black;
+    }
+}
